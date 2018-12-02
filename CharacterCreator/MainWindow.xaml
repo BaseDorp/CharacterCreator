@@ -11,15 +11,15 @@
         <TextBox x:Name="tbox_Title" HorizontalAlignment="Center" Height="41" Margin="274,10,257,0" TextWrapping="Wrap" Text="Create your Character" VerticalAlignment="Top" Width="261" FontSize="24" FontWeight="Bold" BorderBrush="#00000000"/>
         <TextBlock x:Name="tbox_Name" HorizontalAlignment="Left" Margin="399,354,0,0" TextWrapping="Wrap" Text="Jeff" VerticalAlignment="Top" Height="28" Width="71" FontSize="14"/>
         <TextBlock x:Name="tblock_Name" HorizontalAlignment="Left" Margin="338,354,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Height="29" Width="56" RenderTransformOrigin="1.069,-3.961" FontSize="14"/>
-        <Button x:Name="bt_HairRight" Content="Button" HorizontalAlignment="Left" Margin="525,99,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.37,0.429" Click="bt_HairRight_Click"/>
+        <Button x:Name="bt_HairRight" Content="Hat &gt;" HorizontalAlignment="Left" Margin="524,80,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.37,0.429" Click="bt_HairRight_Click" FontSize="16"/>
         <Slider x:Name="slid_Blue" HorizontalAlignment="Left" Margin="80,354,0,0" VerticalAlignment="Top" Width="135" Background="White" Maximum="255" ValueChanged="slid_Blue_ValueChanged"/>
         <TextBlock x:Name="tblock_Blue" HorizontalAlignment="Left" Margin="24,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="51" RenderTransformOrigin="1.069,-3.961" FontSize="14"><Run Text="Blue"/><LineBreak/><Run/></TextBlock>
         <Slider x:Name="slid_Green" HorizontalAlignment="Left" Margin="80,331,0,0" VerticalAlignment="Top" Width="135" Background="White" Maximum="255" ValueChanged="slid_Green_ValueChanged"/>
         <TextBlock x:Name="tblock_Green" HorizontalAlignment="Left" Margin="24,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="51" RenderTransformOrigin="1.069,-3.961" FontSize="14" Text="Green"/>
         <Slider x:Name="slid_Red" HorizontalAlignment="Left" Margin="80,308,0,0" VerticalAlignment="Top" Width="135" Background="White" Maximum="255" ValueChanged="slid_Red_ValueChanged"/>
         <TextBlock x:Name="tblock_Red" HorizontalAlignment="Left" Margin="24,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="51" RenderTransformOrigin="1.069,-3.961" FontSize="14"><Run Text="Red"/><LineBreak/><Run/></TextBlock>
-        <Image x:Name="img_Hair" HorizontalAlignment="Left" Height="326" Margin="289,56,0,0" VerticalAlignment="Top" Width="231" Source="Sunglasses.png" OpacityMask="#FF3A916D"/>
-        <Button x:Name="bt_HairLeft" Content="Button" HorizontalAlignment="Left" Margin="177,99,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.43,0.487" Click="bt_HairLeft_Click"/>
+        <Image x:Name="img_Hair" HorizontalAlignment="Left" Height="327" Margin="289,56,0,0" VerticalAlignment="Top" Width="230" OpacityMask="#FF3A916D"/>
+        <Button x:Name="bt_HairLeft" Content="&lt; Hat" HorizontalAlignment="Left" Margin="176,80,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.43,0.487" Click="bt_HairLeft_Click" FontSize="16"/>
         <Rectangle x:Name="r_Fill" Fill="#997D7DC9" HorizontalAlignment="Left" Height="298" Margin="289,56,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="219" Loaded="r_Fill_Loaded"/>
     </Grid>
 </Window>

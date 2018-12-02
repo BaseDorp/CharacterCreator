@@ -98,6 +98,16 @@
     <Resource Include="Base.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="BruhHair.png" />
+    <Resource Include="BullyHair.png" />
+    <Resource Include="Frown.png" />
+    <Resource Include="LadyHair.png" />
+    <Resource Include="Smile01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AngryTeeth.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Sunglasses.png" />
   </ItemGroup>
   <ItemGroup>

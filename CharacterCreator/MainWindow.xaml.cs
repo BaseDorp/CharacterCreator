@@ -22,14 +22,17 @@ namespace CharacterCreator
     {
         SolidColorBrush color = new SolidColorBrush();
 
-        string[] Hair = { "", "Sunglasses.png", "TopHat.png" };
+        string[] Hair = { "", "Sunglasses.png", "BruhHair.png", "TopHat.png", "LadyHair.png", "BullyHair.png"};
         int CurrentHair = 0;
+        string[] Smile = { "", "AngryTeeth.png", "Frown.png", "Smile01.png"};
+        int CurrentSmile = 0;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        // RGB sliders
         private void slid_Red_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             color.Color = Color.FromArgb(100, Convert.ToByte(slid_Red.Value), Convert.ToByte(slid_Green.Value), Convert.ToByte(slid_Blue.Value));
@@ -50,6 +53,7 @@ namespace CharacterCreator
             color.Color = Color.FromArgb(100, Convert.ToByte(slid_Red.Value), Convert.ToByte(slid_Green.Value), Convert.ToByte(slid_Blue.Value));
         }
 
+        // Changes hat/hair
         private void bt_HairRight_Click(object sender, RoutedEventArgs e)
         {
             if (CurrentHair < Hair.Length)
@@ -65,14 +69,14 @@ namespace CharacterCreator
 
         private void bt_HairLeft_Click(object sender, RoutedEventArgs e)
         {
-            if (CurrentHair < 0)
+            if (CurrentHair > 0 && CurrentHair < Hair.Length)
             {
                 img_Hair.Source = new BitmapImage(new Uri(Hair[CurrentHair--], UriKind.Relative));
             }
             else
             {
-                CurrentHair = Hair.Length;
-                img_Hair.Source = new BitmapImage(new Uri(Hair[CurrentHair--], UriKind.Relative));
+                img_Hair.Source = new BitmapImage(new Uri(Hair[CurrentHair], UriKind.Relative));
+                CurrentHair = Hair.Length-1;
             }
         }
     }
