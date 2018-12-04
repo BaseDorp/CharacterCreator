@@ -8,8 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image x:Name="img_Base" HorizontalAlignment="Left" Height="326" Margin="289,56,0,0" VerticalAlignment="Top" Width="231" Source="Base.png" OpacityMask="#FF3A916D"/>
+        <Ellipse x:Name="r_SkinFill" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="315,90,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="98" RenderTransformOrigin="1.63,-1.051" Loaded="r_SkinFill_Loaded">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-16.033"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
         <TextBox x:Name="tbox_Title" HorizontalAlignment="Center" Height="41" Margin="274,10,257,0" TextWrapping="Wrap" Text="Create your Character" VerticalAlignment="Top" Width="261" FontSize="24" FontWeight="Bold" BorderBrush="#00000000"/>
-        <TextBlock x:Name="tbox_Name" HorizontalAlignment="Left" Margin="399,354,0,0" TextWrapping="Wrap" Text="Jeff" VerticalAlignment="Top" Height="28" Width="71" FontSize="14"/>
         <TextBlock x:Name="tblock_Name" HorizontalAlignment="Left" Margin="338,354,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Height="29" Width="56" RenderTransformOrigin="1.069,-3.961" FontSize="14"/>
         <Button x:Name="bt_HairRight" Content="Hat &gt;" HorizontalAlignment="Left" Margin="524,80,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.37,0.429" Click="bt_HairRight_Click" FontSize="16"/>
         <Slider x:Name="slid_Blue" HorizontalAlignment="Left" Margin="80,354,0,0" VerticalAlignment="Top" Width="135" Background="White" Maximum="255" ValueChanged="slid_Blue_ValueChanged"/>
@@ -20,6 +29,10 @@
         <TextBlock x:Name="tblock_Red" HorizontalAlignment="Left" Margin="24,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="51" RenderTransformOrigin="1.069,-3.961" FontSize="14"><Run Text="Red"/><LineBreak/><Run/></TextBlock>
         <Image x:Name="img_Hair" HorizontalAlignment="Left" Height="327" Margin="289,56,0,0" VerticalAlignment="Top" Width="230" OpacityMask="#FF3A916D"/>
         <Button x:Name="bt_HairLeft" Content="&lt; Hat" HorizontalAlignment="Left" Margin="176,80,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.43,0.487" Click="bt_HairLeft_Click" FontSize="16"/>
-        <Rectangle x:Name="r_Fill" Fill="#997D7DC9" HorizontalAlignment="Left" Height="298" Margin="289,56,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="219" Loaded="r_Fill_Loaded"/>
+        <Button x:Name="bt_SmileRight" Content="Smile &gt;" HorizontalAlignment="Left" Margin="524,163,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.37,0.429" Click="bt_SmileRight_Click" FontSize="16"/>
+        <Button x:Name="bt_SmileLeft" Content="&lt; Smile" HorizontalAlignment="Left" Margin="176,163,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.43,0.487" Click="bt_SmileLeft_Click" FontSize="16"/>
+        <Image x:Name="img_Smile" HorizontalAlignment="Left" Height="327" Margin="290,56,0,0" VerticalAlignment="Top" Width="230" OpacityMask="#FF3A916D"/>
+        <TextBox x:Name="tbox_SkinColor" HorizontalAlignment="Center" Height="27" Margin="24,275,572,0" TextWrapping="Wrap" Text="Skin Color" VerticalAlignment="Top" Width="196" FontSize="18" BorderBrush="#00000000" TextAlignment="Center"/>
+<TextBox x:Name="tbox_Name" HorizontalAlignment="Left" Margin="386,353,0,0" TextWrapping="Wrap" Text="Jeff" VerticalAlignment="Top" Height="28" Width="71" FontSize="14"/>
     </Grid>
 </Window>

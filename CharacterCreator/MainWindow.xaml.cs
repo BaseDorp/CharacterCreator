@@ -22,10 +22,10 @@ namespace CharacterCreator
     {
         SolidColorBrush color = new SolidColorBrush();
 
-        string[] Hair = { "", "Sunglasses.png", "BruhHair.png", "TopHat.png", "LadyHair.png", "BullyHair.png"};
-        int CurrentHair = 0;
-        string[] Smile = { "", "AngryTeeth.png", "Frown.png", "Smile01.png"};
-        int CurrentSmile = 0;
+        string[] Hair = { "", "Sunglasses.png", "BruhHair.png", "TopHat.png", "LadyHair.png", "BullyHair.png" };
+        int CurrentHair = 1;
+        string[] Smile = { "", "AngryTeeth.png", "Frown.png", "Smile01.png" };
+        int CurrentSmile = 1;
 
         public MainWindow()
         {
@@ -38,9 +38,9 @@ namespace CharacterCreator
             color.Color = Color.FromArgb(100, Convert.ToByte(slid_Red.Value), Convert.ToByte(slid_Green.Value), Convert.ToByte(slid_Blue.Value));
         }
 
-        private void r_Fill_Loaded(object sender, RoutedEventArgs e)
+        private void r_SkinFill_Loaded(object sender, RoutedEventArgs e)
         {
-            r_Fill.Fill = color;
+            r_SkinFill.Fill = color;
         }
 
         private void slid_Green_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -76,7 +76,34 @@ namespace CharacterCreator
             else
             {
                 img_Hair.Source = new BitmapImage(new Uri(Hair[CurrentHair], UriKind.Relative));
-                CurrentHair = Hair.Length-1;
+                CurrentHair = Hair.Length - 1;
+            }
+        }
+
+        // Changes smile
+        private void bt_SmileRight_Click(object sender, RoutedEventArgs e)
+        {
+            if (CurrentSmile < Smile.Length)
+            {
+                img_Smile.Source = new BitmapImage(new Uri(Smile[CurrentSmile++], UriKind.Relative));
+            }
+            else
+            {
+                CurrentSmile = 0;
+                img_Smile.Source = new BitmapImage(new Uri(Smile[CurrentSmile++], UriKind.Relative));
+            }
+        }
+
+        private void bt_SmileLeft_Click(object sender, RoutedEventArgs e)
+        {
+            if (CurrentSmile > 0 && CurrentSmile < Smile.Length)
+            {
+                img_Smile.Source = new BitmapImage(new Uri(Smile[CurrentSmile--], UriKind.Relative));
+            }
+            else
+            {
+                img_Smile.Source = new BitmapImage(new Uri(Smile[CurrentSmile], UriKind.Relative));
+                CurrentSmile = Smile.Length - 1;
             }
         }
     }
